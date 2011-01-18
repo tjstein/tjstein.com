@@ -30,7 +30,7 @@ end
 
 desc 'Build and deploy'
 task :deploy => :build do
-  sh 'rsync -rtz --delete _site/ root@tjstein.com:/var/www/tjstein.com/_site'
+  sh 'rsync -rtz --delete _site/ deploy@tjstein.com:/var/www/tjstein.com/public'
 end
 
 desc 'Push source code to Github'
