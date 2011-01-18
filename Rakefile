@@ -39,6 +39,11 @@ task :push do
   puts `git push origin master`
 end
 
+desc 'List all draft posts'
+task :drafts do
+  puts `find ./_posts -type f -exec grep -H 'published: false' {} \\;`
+end
+
 desc 'Begin a new post'
 task :post do   
   ROOT_DIR = File.dirname(__FILE__)
