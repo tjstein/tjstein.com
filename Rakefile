@@ -33,6 +33,12 @@ task :deploy => :build do
   sh 'rsync -rtz --delete _site/ root@tjstein.com:/var/www/tjstein.com/_site'
 end
 
+desc 'Push source code to Github'
+task :push do
+  puts '* Pushing to Github'
+  puts `git push origin master`
+end
+
 desc 'Begin a new post'
 task :post do   
   ROOT_DIR = File.dirname(__FILE__)
