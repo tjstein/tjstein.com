@@ -73,7 +73,7 @@ comments: true
 END
 
   File.open(path, 'w') {|f| f << header }
-  system("mate", "-a", path)    
+  system("kod", path)    
 end  
 
 task :default => :server
