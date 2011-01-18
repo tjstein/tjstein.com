@@ -1,0 +1,21 @@
+title: "TJ Stein"
+url: "http://tjstein.com"
+author: "TJ Stein"
+email: "thomasjstein@gmail.com"
+description: "The personal blog of TJ Stein."
+
+auto: false
+source: .
+paginate: 5
+paginate_files:
+ - index.html
+ - archive.html
+
+permalink: /:year/:month/:title
+
+markdown: rdiscount
+pygments: false
+
+exclude:
+  - README.markdown
+  - _drafts

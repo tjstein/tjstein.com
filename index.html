@@ -1,0 +1,35 @@
+---
+layout: default
+title: Home
+---
+
+{% for post in paginator.posts %}
+  <article class="post">
+
+    <h3><a href="{{ site.url }}{{ post.url }}" rel="bookmark permalink" title="Permanent link to this post">{{ post.title }}</a></h3>
+
+    {{ post.content }}
+
+    <div class="meta">
+      Published: {{ post.date | date: "%Y-%m-%d" }}
+      &mdash;
+      <a href="{{ site.url }}{{ post.url }}#disqus_thread" title="Comments">Comments</a>
+    </div>
+
+  </article>
+{% endfor %}
+
+<div class='paging'>
+  {% if paginator.next_page %}
+    <a href='/page{{paginator.next_page}}' class='older'><h1>Older Posts</h1></a>
+  {% endif %}
+{% if paginator.previous_page %}
+  {% if paginator.previous_page == 1 %}
+    <a href='/' class='newer'><h1>Newer Posts</h1></a>
+  {% else %}
+    <a href='/page{{paginator.previous_page}}' class='newer'><h1>Newer Posts</h1></a>
+  {% endif %}
+{% endif %}
+  
+  <div class='clear'></div>
+</div>
