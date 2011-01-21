@@ -13,22 +13,18 @@ Although I wasn't able to post my slides, I've posted the video here. I look for
     <center>				
     <!-- Begin VideoJS -->
     <div class="video-js-box vjs-paused" style="width: 600px;">
-		<!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody -->
 		<object width="600" height="350" data="http://releases.flowplayer.org/swf/flowplayer-3.2.3.swf" type="application/x-shockwave-flash" class="vjs-flash-fallback" style="height: 350px;">
 			<param value="http://releases.flowplayer.org/swf/flowplayer-3.2.3.swf" name="movie">
 			<param value="true" name="allowfullscreen">
-			<param value="config={'clip':{'url':'http://tjstein.com/media/tj_stein_wcla_2010.m4v' ,'autoPlay':false ,'autoBuffering':true }}" name="flashvars">
+			<param value="config={'clip':{'url':'http://cdn.tjstein.com/tj_stein_wcla_2010.m4v' ,'autoPlay':false ,'autoBuffering':true }}" name="flashvars">
 			
 		</object><video width="600" height="350" preload="auto" controls="" class="video-js" tabindex="0" style="display: none;" src="">
-		<source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="http://tjstein.com/media/tj_stein_wcla_2010.m4v"></source>
-		
-		
+		<source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="http://cdn.tjstein.com/tj_stein_wcla_2010.m4v"></source>
 		<!-- Flash Fallback. Use any flash video player here. Make sure to keep the vjs-flash-fallback class. -->
-		
 	</video>
     <!-- Download links provided for devices that can't play video in the browser. -->
     <p class="vjs-no-video" style="display: none;"><strong>Download Video:</strong>
-		<a href="http://tjstein.com/media/tj_stein_wcla_2010.m4v">MP4</a>
+		<a href="http://cdn.tjstein.com/tj_stein_wcla_2010.m4v">MP4</a>
 	</p>
      </center><br>
 	</div>
