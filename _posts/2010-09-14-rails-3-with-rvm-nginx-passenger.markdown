@@ -70,7 +70,7 @@ You'll need to update the Nginx configuration to make sure it's using the right 
 
 <pre><code class="bash">sed -i".bak" '47d' /opt/nginx/conf/nginx.conf
 sed -i '47 a\
-            root   /opt/nginx/html/testapp/public/;' /opt/nginx/conf/nginx.conf
+            root   /opt/nginx/html/testapp/public;' /opt/nginx/conf/nginx.conf
 /etc/init.d/nginx start</code></pre>
 
 The spacing looks a little weird in that middle sed command for a purpose -- to keep the syntax of the nginx.conf file consistent. Now that we've restarted Nginx, we should see the 'Welcome aboard: You're riding Ruby on Rails!' image:
