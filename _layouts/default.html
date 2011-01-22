@@ -13,8 +13,7 @@
     <link href="http://tjstein.com/" rel="home" />
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="/js/webfont.js" language="javascript" ></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" language="javascript" ></script>
     <script src="/js/highlight.pack.js" language="javascript"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <link type="text/css" rel="stylesheet" media="screen, projection" href="/stylesheets/screen.css" /> 
@@ -26,7 +25,6 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    {% include google_analytics.html %}
 	<script type="text/javascript">
 			WebFontConfig = {
 			  custom: { families: ['DroidSansRegular', 'YanoneKaffeesatzRegular'],
@@ -37,7 +35,7 @@
 	        document.getElementsByTagName("html")[0].className += " wf-loading";
 	        var wf = document.createElement('script');
 	        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-	            '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
 	        wf.type = 'text/javascript';
 	        wf.async = 'true';
 	        var s = document.getElementsByTagName('script')[0];
@@ -111,6 +109,6 @@
     </div>
 
     {% include disqus.html %}
-
+    {% include google_analytics.html %}
   </body>
 </html>
