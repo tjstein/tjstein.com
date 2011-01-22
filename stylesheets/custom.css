@@ -23,7 +23,7 @@ ul.links li.first{font-weight:bold;}
 ul.links li.last:after, ul.links li.first:after{content:'  ';}
 #footer{border-color:#E8E8E8;border-style:double none;border-width:3px;color:#696969;font-family:georgia;font-size:15px;font-style:italic;line-height:30px;margin-top:0;padding-top:25px;}
 .admin{padding:3px 5px;margin:5px 0;border:1px solid #aaa;background:#eee;}
-#sidebar{margin-top:5px;text-align:left;margin-left:35px;}
+#sidebar{margin-top:64px;text-align:left;margin-left:35px;}
 #sidebar .sidebarbox{margin-bottom:10px;}
 #sidebar .sidebarbox h4{font-weight:normal;font-size:18px;margin:10px 2px 2px;padding-bottom:5px;}
 #sidebar .sidebarbox p{padding-left:2px;font-size:1.2em;}
