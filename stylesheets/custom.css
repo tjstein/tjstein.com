@@ -30,15 +30,15 @@ ul.links li.last:after, ul.links li.first:after{content:'  ';}
 #sidebar .sidebarbox ul{margin-left:1px;padding:2px;list-style-type:none;}
 #sidebar .sidebarbox ul li{font-size:1.2em;padding:0 0 5px 0;}
 a.icon-link{padding:1px 1px 1px 21px;text-align:left;}
-a#feed-link{background:url("http://static.tjstein.com/images/feedicon16.png") center left no-repeat;}
-a#flickr-link{background:url("http://static.tjstein.com/images/flickr-icon.png") center left no-repeat;}
-a#tumblr-link{background:url("http://static.tjstein.com/images/tumblr-icon.png") center left no-repeat;}
-a#github-link{background:url("http://static.tjstein.com/images/github-icon.png") center left no-repeat;}
-a#twitter-link{background:url("http://static.tjstein.com/images/twitter-icon.png") center left no-repeat;}
-a#linkedin-link{background:url("http://static.tjstein.com/images/linkedin-icon.png") center left no-repeat;}
-a#aim-link{background:url("http://static.tjstein.com/images/aim-icon.png") center left no-repeat;}
-a#gmail-link{background:url("http://static.tjstein.com/images/gmail-icon.png") center left no-repeat;}
-a#skype-link{background:url("http://static.tjstein.com/images/skype-icon.png") center left no-repeat;}
+a#feed-link{background:url("/images/feedicon16.png") center left no-repeat;}
+a#flickr-link{background:url("/images/flickr-icon.png") center left no-repeat;}
+a#tumblr-link{background:url("/images/tumblr-icon.png") center left no-repeat;}
+a#github-link{background:url("/images/github-icon.png") center left no-repeat;}
+a#twitter-link{background:url("/images/twitter-icon.png") center left no-repeat;}
+a#linkedin-link{background:url("/images/linkedin-icon.png") center left no-repeat;}
+a#aim-link{background:url("/images/aim-icon.png") center left no-repeat;}
+a#gmail-link{background:url("/images/gmail-icon.png") center left no-repeat;}
+a#skype-link{background:url("/images/skype-icon.png") center left no-repeat;}
 .pagination{font-size:1.2em;width:99%;margin:10px;}
 .pagination .previous_link{float:left;padding-left:25px;}
 .pagination .next_link{float:right;padding-right:25px;}
