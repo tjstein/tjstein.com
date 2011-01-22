@@ -22,7 +22,7 @@ blockquote:before, blockquote:after, q:before, q:after{content:"";}
 blockquote, q{quotes:"" "";}
 a img{border:none;}
 html{font-size:100.01%;}
-body{font-size:75%;color:#222;background:#fff;font-family:DroidSansRegular, Arial, Helvetica, sans-serif;}
+body{font-size:75%;color:#222;background:#fff;font-family:DroidSansRegular, Arial, Helvetica, sans-serif;overflow: -moz-scrollbars-vertical;overflow-x: hidden;overflow-y: scroll;}
 h1, h2, h3, h4, h5, h6{font-family:YanoneKaffeesatzRegular, Arial, Helvetica, sans-serif;font-weight:normal;color:#111;}
 h1{font-size:3em;line-height:1;}
 h2{font-size:2em;margin-bottom:0.75em;padding-top:20px;}
