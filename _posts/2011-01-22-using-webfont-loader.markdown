@@ -23,7 +23,7 @@ I then load the font in like I would any other family:
 
 Everything looked great besides one small, yet extremely annoying, caveat.
 
-I noticed in Firefox and Opera that for a split second, just before the page finished rendering, un-styled text would be displayed. This drove me crazy. Some subsequent Googling let me know that this was common, often referred to as FOUT (Flash of Unstyled Text). The fix was pretty trivial. What you can do is use the WebFont Loader from Google & Typekit.
+I noticed in Firefox and Opera that for a split second, just before the page finished rendering, unstyled text would be displayed. This drove me crazy. Some subsequent Googling let me know that this was common, often referred to as FOUT (Flash of Unstyled Text). The fix was pretty trivial. What you can do is use the WebFont Loader from Google & Typekit.
 
 The <a href="http://code.google.com/apis/webfonts/docs/webfont_loader.html" title="WebFont Loader - Google Font API - Google Code" rel="external">WebFont Loader</a> is a JavaScript library that gives you more control over font loading than the Google Font API provides. The key is using the events system to hide the font until it's ready to be shown. There are quite a few implementation options so I'd suggest checking out some of the following articles for help:
 
