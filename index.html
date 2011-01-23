@@ -20,15 +20,15 @@ title: Home
 {% endfor %}
 
 <div class='paging'>
-  {% if paginator.next_page %}
-    <a href='/page{{paginator.next_page}}' class='older'><h1>Older Posts</h1></a>
-  {% endif %}
 {% if paginator.previous_page %}
   {% if paginator.previous_page == 1 %}
     <a href='/' class='newer'><h1>Newer Posts</h1></a>
   {% else %}
     <a href='/page{{paginator.previous_page}}' class='newer'><h1>Newer Posts</h1></a>
   {% endif %}
+{% endif %}
+{% if paginator.next_page %}
+  <a href='/page{{paginator.next_page}}' class='older'><h1>Older Posts</h1></a>
 {% endif %}
   
   <div class='clear'></div>

@@ -42,3 +42,5 @@ a#skype-link{background:url("/images/skype-icon.png") center left no-repeat;}
 .pagination{font-size:1.2em;width:99%;margin:10px;}
 .pagination .previous_link{float:left;padding-left:25px;}
 .pagination .next_link{float:right;padding-right:25px;}
+.older{float:right;padding-left:25px;}
+.newer{float:left;}

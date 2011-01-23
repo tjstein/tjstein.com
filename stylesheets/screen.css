@@ -27,7 +27,11 @@ h1, h2, h3, h4, h5, h6{font-family:YanoneKaffeesatzRegular, Arial, Helvetica, sa
 .wf-loading body, .wf-loading h1, .wf-loading h2, .wf-loadingh3, .wf-loading h4, .wf-loading h5, .wf-loading h6 {
 	visibility: hidden;
 }
-h1{font-size:3em;line-height:1;}
+h1{
+    font-size: 3em;
+    line-height: 1;
+    margin: 15px 0;
+}
 h2{font-size:2em;margin-bottom:0.75em;padding-top:20px;}
 h3{font-size:1.5em;line-height:1;margin-bottom:1em;}
 h4{font-size:1.2em;line-height:1.25;margin-bottom:1.25em;}
@@ -97,7 +101,13 @@ form.inline p{margin-bottom:0;}
 .success a{color:#264409;}
 .info a{color:#205791;}
 .container{width:950px;margin:0 auto;}
-.showgrid{background:url(src/grid.png);}
+.alignleft {
+    background-color: #FFFFFF;
+    border: 0 none;
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+}
 .column, .span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11, .span-12, .span-13, .span-14, .span-15, .span-16, .span-17, .span-18, .span-19, .span-20, .span-21, .span-22, .span-23, .span-24{float:left;margin-right:10px;}
 .last{margin-right:0;}
 .span-1{width:30px;}
