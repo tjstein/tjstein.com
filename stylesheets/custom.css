@@ -7,8 +7,9 @@ body{text-align:center;}
 article{margin-right:0px;}
 .post{font-size:1.2em;}
 .post h3{margin:20px 0px 20px 0px;font-size:36px;}
+.post h3 a {margin:20px 0px 20px 0px;font-size:36px; color:#597a9b;}
 .post .postbody{font-family:Georgia, "Times New Roman", serif;}
-.post .meta{border-color:#E8E8E8;border-style:double none;border-width:3px;color:#696969;font-family:georgia;font-size:100%;font-style:italic;padding:5px 0;}
+.post .meta{border-color:#E8E8E8;border-style:double none;border-width:3px;color:#696969;font-family:georgia;font-size:100%;font-style:italic;padding:5px 0;height:23px;}
 .post .meta a{color:#696969;text-decoration:none;}
 .post .meta a:hover{color:#333;}
 ul.pager{text-align:center;font-size:1.1em;}
@@ -24,8 +25,9 @@ ul.links li.last:after, ul.links li.first:after{content:'  ';}
 #footer{border-color:#E8E8E8;border-style:double none;border-width:3px;color:#696969;font-family:georgia;font-size:15px;font-style:italic;line-height:30px;margin-top:0;padding-top:25px;}
 .admin{padding:3px 5px;margin:5px 0;border:1px solid #aaa;background:#eee;}
 #sidebar{margin-top:64px;text-align:left;margin-left:35px;}
+#sidebar a{color:#222222;}
 #sidebar .sidebarbox{margin-bottom:10px;}
-#sidebar .sidebarbox h4{font-weight:normal;font-size:18px;margin:10px 2px 2px;padding-bottom:5px;}
+#sidebar .sidebarbox h4{font-weight:normal;font-size:20px;margin:10px 2px 2px;padding-bottom:5px;}
 #sidebar .sidebarbox p{padding-left:2px;font-size:1.2em;}
 #sidebar .sidebarbox ul{margin-left:1px;padding:2px;list-style-type:none;}
 #sidebar .sidebarbox ul li{font-size:1.2em;padding:0 0 5px 0;}
@@ -44,3 +46,7 @@ a#skype-link{background:url("/images/skype-icon.png") center left no-repeat;}
 .pagination .next_link{float:right;padding-right:25px;}
 .older{float:right;padding-left:25px;}
 .newer{float:left;}
+.tweet{float:right;}
+.published{float:left;}
+.older a{color:#597A9B;}
+.newer a{color:#597A9B;}
