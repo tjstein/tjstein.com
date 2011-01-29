@@ -7,7 +7,6 @@ require 'rake/clean'
 
 desc 'Build site with Jekyll'
 task :build => [:clean] do
-  # compile site
   jekyll  
 end
 
@@ -28,9 +27,16 @@ task :server => [:clean]  do
   jekyll('--server --auto')
 end
 
-desc 'Build and deploy'
+desc 'Build & Deploy'
 task :deploy => :build do
   sh 'rsync -rtz --delete _site/ deploy@tjstein.com:/var/www/tjstein.com/public'
+end
+
+desc 'Minify CSS'
+task :minify do
+  sh 'java -jar ~/.java/yuicompressor-2.4.2.jar --type css css/print.css -o css/print.css'
+  sh 'java -jar ~/.java/yuicompressor-2.4.2.jar --type css css/screen.css -o css/screen.css'
+  sh 'java -jar ~/.java/yuicompressor-2.4.2.jar --type css css/custom.css -o css/custom.css'  
 end
 
 desc 'Push source code to Github'
@@ -66,7 +72,7 @@ task :post do
 ---
 layout: post
 title: #{title}
-excerpt: Description Content
+excerpt: 
 comments: true
 ---
 
