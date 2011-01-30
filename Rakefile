@@ -28,15 +28,17 @@ task :server => [:clean]  do
 end
 
 desc 'Build & Deploy'
-task :deploy => :build do
+task :deploy do
   sh 'rsync -rtz --delete _site/ deploy@tjstein.com:/var/www/tjstein.com/public'
 end
 
-desc 'Minify CSS'
+desc 'Minify CSS & HTML'
 task :minify do
-  sh 'java -jar ~/.java/yuicompressor-2.4.2.jar --type css css/print.css -o css/print.css'
-  sh 'java -jar ~/.java/yuicompressor-2.4.2.jar --type css css/screen.css -o css/screen.css'
-  sh 'java -jar ~/.java/yuicompressor-2.4.2.jar --type css css/custom.css -o css/custom.css'  
+  sh 'java -jar ~/.java/yuicompressor-2.4.2.jar --type css css/print.css -o _site/css/print.css'
+  sh 'java -jar ~/.java/yuicompressor-2.4.2.jar --type css css/screen.css -o _site/css/screen.css'
+  sh 'java -jar ~/.java/yuicompressor-2.4.2.jar --type css css/custom.css -o _site/css/custom.css'
+  sh 'java -jar ~/.java/htmlcompressor-0.9.8.jar _site/index.html -o _site/index.html'
+  sh 'java -jar ~/.java/htmlcompressor-0.9.8.jar --type=xml _site/sitemap.xml -o _site/sitemap.xml'
 end
 
 desc 'Push source code to Github'
