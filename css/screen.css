@@ -50,7 +50,7 @@ html {
     font-size: 100.01%;
 }
 body {
-    background: url("/images/bg2.gif") repeat-x scroll 0 0 #FFFFFF;
+    background: url("/images/bg.png") repeat-x scroll 0 0 #FFFFFF;
     color: #444444;
     font-family: DroidSansRegular,Arial,Helvetica,sans-serif;
     font-size: 75%;
