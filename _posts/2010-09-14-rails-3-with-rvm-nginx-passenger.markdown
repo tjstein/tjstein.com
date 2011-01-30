@@ -75,6 +75,6 @@ sed -i '47 a\
 
 The spacing looks a little weird in that middle sed command for a purpose -- to keep the syntax of the nginx.conf file consistent. Now that we've restarted Nginx, we should see the 'Welcome aboard: You're riding Ruby on Rails!' image:
 
-<center><img title="You're riding Ruby on Rails!" src="/images/rails3.jpg" alt="You're riding Ruby on Rails!" width="567" height="271" /></center>
+<img title="You're riding Ruby on Rails!" src="/images/rails3.jpg" alt="You're riding Ruby on Rails!" width="567" height="271" />
 
-If you're interested in an all-in-one installation, I've put together the steps above into a <a href="http://gist.github.com/raw/578736/0932236d03b18aff32361ec4718653c12b167209/rails3-nginx-passenger.sh" target="_new">simple bash script</a>. Enjoy!
+If you're interested in an all-in-one installation, I've put together the steps above into a <a href="http://gist.github.com/raw/578736/0932236d03b18aff32361ec4718653c12b167209/rails3-nginx-passenger.sh" target="_blank">simple bash script</a>. Enjoy!
