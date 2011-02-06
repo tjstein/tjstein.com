@@ -19,59 +19,84 @@ Before we get started, we'll be using a fresh (ve) Server from <a href="http://m
 
 <strong>Prerequisites</strong>: You'll need these to get through the entire install process for RVM, Nginx and <a href="http://www.modrails.com/">Phusion Passenger</a> (mod_rails).
 
-<pre><code class="bash">aptitude -y install curl git-core build-essential zlib1g-dev libssl-dev</code></pre>
-<pre><code class="bash">aptitude -y install libreadline5-dev libc6 libpcre3 libssl0.9.8 zlib1g</code></pre>
+{% highlight bash %}
+aptitude -y install curl git-core build-essential zlib1g-dev libssl-dev
+{% endhighlight %}
+
+{% highlight bash %}
+aptitude -y install libreadline5-dev libc6 libpcre3 libssl0.9.8 zlib1g
+{% endhighlight %}
 
 Now we'll need to do a system-wide install of RVM. For your convenience, the dude that wrote RVM provided a script you can run on most that does all the heavy lifting:
 
-<pre><code class="bash">bash &lt; &lt;( curl -L http://bit.ly/rvm-install-system-wide )</code></pre>
+{% highlight bash %}
+bash < <( curl -L http://bit.ly/rvm-install-system-wide )
+{% endhighlight %}
 
 Every piece of documentation and website I read on this had this particular part wrong. I've updated the correct path from the documentation for the purposes of this article:
 
-<pre><code class="bash">echo "[[ -s '/usr/local/lib/rvm' ]] &amp;&amp; source '/usr/local/lib/rvm'" &gt;&gt; ~/.bashrc
-source ~/.bashrc</code></pre>
+{% highlight bash %}
+echo "[[ -s '/usr/local/lib/rvm' ]] && source '/usr/local/lib/rvm'" >> ~/.bashrc
+source ~/.bashrc
+{% endhighlight %}
 
 Doing so ensures RVM is loaded as a function (versus as a binary), ensuring commands such as <em>rvm use</em> work as expected. Please note that you can confirm this worked correctly by opening a new shell and running:
 
-<pre><code class="bash">type rvm | head -n1</code></pre>
+{% highlight bash %}
+type rvm | head -n1
+{% endhighlight %}
 
 If this was performed correctly, you should see:
 
-<pre><code class="bash">rvm is a function</code></pre>
+{% highlight bash %}
+rvm is a function
+{% endhighlight %}
 
 So if that looks good, we can continue installing Ruby:
 
-<pre><code class="bash">rvm install 1.9.2</code></pre>
+{% highlight bash %}
+rvm install 1.9.2
+{% endhighlight %}
 
 Now sit back and relax. This took about 8 minutes on my system. To make sure that the system uses this version, we can use RVM for this and install the rails and passenger gems:
 
-<pre><code>rvm --default ruby-1.9.2
-gem install rails passenger</code></pre>
+{% highlight bash %}
+rvm --default ruby-1.9.2
+gem install rails passenger
+{% endhighlight %}
 
 Now comes the fun part of installing Nginx. This will grab the stable binary, bake in Phusion Passenger and compile it:
 
-<pre><code>rvmsudo passenger-install-nginx-module</code></pre>
+{% highlight bash %}
+rvmsudo passenger-install-nginx-module
+{% endhighlight %}
 
 You will be presented with two options right from the start. Just choose Option 1 and let passenger download, compile and install Nginx for you. You'll also be prompted to choose a prefix directory. You can leave it as the default, /opt/nginx. When it completes, it should give you some Nginx configuration snippets for your rails apps. Save those as you'll need them later.
 
 Now, you'll want a init script so you can stop/start/restart Nginx. I've provided mine here:
 
-<pre><code>cd /etc/init.d
+{% highlight bash %}
+cd /etc/init.d
 wget -O nginx http://bit.ly/8XU8Vl
 chmod +x nginx
-/usr/sbin/update-rc.d -f nginx defaults</code></pre>
+/usr/sbin/update-rc.d -f nginx defaults
+{% endhighlight %}
 
 We're almost done. Now we can create the test application:
 
-<pre><code class="bash">cd /opt/nginx/html
-rails new testapp</code></pre>
+{% highlight bash %}
+cd /opt/nginx/html
+rails new testapp
+{% endhighlight %}
 
 You'll need to update the Nginx configuration to make sure it's using the right document root now. The file will be located in <em>/opt/nginx/conf/nginx.conf</em>:
 
-<pre><code class="bash">sed -i".bak" '47d' /opt/nginx/conf/nginx.conf
+{% highlight bash %}
+sed -i".bak" '47d' /opt/nginx/conf/nginx.conf
 sed -i '47 a\
             root   /opt/nginx/html/testapp/public;' /opt/nginx/conf/nginx.conf
-/etc/init.d/nginx start</code></pre>
+/etc/init.d/nginx start
+{% endhighlight %}
 
 The spacing looks a little weird in that middle sed command for a purpose -- to keep the syntax of the nginx.conf file consistent. Now that we've restarted Nginx, we should see the 'Welcome aboard: You're riding Ruby on Rails!' image:
 

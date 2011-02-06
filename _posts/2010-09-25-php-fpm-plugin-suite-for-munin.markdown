@@ -8,33 +8,42 @@ Since switching from a spawn-fcgi implementation several months ago, I’ve been
 
 Before installing, make sure you have the most recent version of PHP-FPM:
 
-<pre><code>php-fpm -v
+{% highlight bash %}
+php-fpm -v
 PHP 5.3.2-1ubuntu4.5ppa5~lucid1 (fpm-fcgi) (built: Sep 22 2010 08:04:01)
 Copyright (c) 1997-2009 The PHP Group
 Zend Engine v2.3.0, Copyright (c) 1998-2010 Zend Technologies
-    with Suhosin v0.9.29, Copyright (c) 2007, by SektionEins GmbH</code></pre>
+    with Suhosin v0.9.29, Copyright (c) 2007, by SektionEins GmbH
+{% endhighlight %}
 
 Now we can get into our plugin directory, clone the plugins from my Git repo and make them executable:
 
-<pre><code>cd /usr/share/munin/plugins
+{% highlight bash %}
+cd /usr/share/munin/plugins
 git clone git://github.com/bummercloud/PHP5-FPM-Munin-Plugins.git
-chmod +x PHP5-FPM-Munin-Plugins/phpfpm_*</code></pre>
+chmod +x PHP5-FPM-Munin-Plugins/phpfpm_*
+{% endhighlight %}
 
 To enable the plugins, you’ll need to create these symlinks:
 
-<pre><code class="bash">ln -s /usr/share/munin/plugins/PHP5-FPM-Munin-Plugins/phpfpm_average /etc/munin/plugins/phpfpm_average
+{% highlight bash %}
+ln -s /usr/share/munin/plugins/PHP5-FPM-Munin-Plugins/phpfpm_average /etc/munin/plugins/phpfpm_average
 ln -s /usr/share/munin/plugins/PHP5-FPM-Munin-Plugins/phpfpm_connections /etc/munin/plugins/phpfpm_connections
 ln -s /usr/share/munin/plugins/PHP5-FPM-Munin-Plugins/phpfpm_memory /etc/munin/plugins/phpfpm_memory
 ln -s /usr/share/munin/plugins/PHP5-FPM-Munin-Plugins/phpfpm_status /etc/munin/plugins/phpfpm_status
-ln -s /usr/share/munin/plugins/PHP5-FPM-Munin-Plugins/phpfpm_processes /etc/munin/plugins/phpfpm_processes</code></pre>
+ln -s /usr/share/munin/plugins/PHP5-FPM-Munin-Plugins/phpfpm_processes /etc/munin/plugins/phpfpm_processes
+{% endhighlight %}
 
 **Note**: For the phpfpm_status and phpfpm_connections  plugins, you’ll need to enable the status feature included in newer versions (5.3.2+) of PHP-FPM. Open up the php5-fpm.conf, in /etc/php5/fpm, and uncomment line 186 for the pm.status_path directive:
 
-<pre><code>pm.status_path = /status</code></pre>
+{% highlight bash %}
+pm.status_path = /status
+{% endhighlight %}
 
 Jérôme Loyet from the Nginx forums provided some useful insight on how to get this working with Nginx. You’ll essentially set up the status location directive like this:
 
-<pre><code class="nginx">location ~ ^/(status|ping)$ {
+{% highlight nginx %}
+location ~ ^/(status|ping)$ {
     include fastcgi_params;
     fastcgi_pass backend;
     fastcgi_param SCRIPT_FILENAME $fastcgi_script_name;
@@ -42,26 +51,33 @@ Jérôme Loyet from the Nginx forums provided some useful insight on how to get 
     allow stats_collector.localdomain;
     allow watchdog.localdomain;
     deny all;
-}</code></pre>
+}
+{% endhighlight %}
 
 You’ll need to make sure that from within your box, you can curl /status with # curl http://localhost/status. You should get a response similar to this:
 
-<pre><code>accepted conn: 40163
+{% highlight bash %}
+accepted conn: 40163
 pool: www
 process manager: dynamic
 idle processes: 6
 active processes: 0
-total processes: 6</code></pre>
+total processes: 6
+{% endhighlight %}
 
 Once the plugins have been set up, you run any of the plugins manually using the munin-run command line tool:
 
-<pre><code>cd /etc/munin/plugins && munin-run phpfpm_status</code></pre>
+{% highlight bash %}
+cd /etc/munin/plugins && munin-run phpfpm_status
+{% endhighlight %}
 
 The output should look like this:
 
-<pre><code>idle.value 6
+{% highlight bash %}
+idle.value 6
 active.value 0
-total.value 6</code></pre>
+total.value 6
+{% endhighlight %}
 
 **Note**: The phpfpm_status plugin is particularly useful if you’re using dynamic process management. You can choose static or dynamic in the php5-fpm.conf.
 

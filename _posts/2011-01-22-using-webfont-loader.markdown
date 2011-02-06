@@ -9,17 +9,25 @@ In the process of designing this site, I decided to use some custom fonts using 
 
 For all of my H1-H6 headings, I use the following markup:
 
-<pre><code class="css">@font-face {
+{% highlight css %}
+@font-face {
 	font-family: 'YanoneKaffeesatzRegular';
 	src: url('YanoneKaffeesatz-Regular-webfont.eot');
 	src: local('☺'), url('/fonts/YanoneKaffeesatz-Regular-webfont.woff') format('woff'), url('/fonts/YanoneKaffeesatz-Regular-webfont.ttf') format('truetype'), url('/fonts/YanoneKaffeesatz-Regular-webfont.svg#webfont1BSMunJa') format('svg');
 	font-weight: normal;
 	font-style: normal;
-}</code></pre>
+}
+{% endhighlight %}
 
 I then load the font in like I would any other family:
 
-<pre><code class="css">h1, h2, h3, h4, h5, h6{font-family:YanoneKaffeesatzRegular, Arial, Helvetica, sans-serif;font-weight:normal;color:#111;}</code></pre>
+{% highlight css %}
+h1, h2, h3, h4, h5, h6 {
+	font-family: YanoneKaffeesatzRegular, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: #111111;
+}
+{% endhighlight %}
 
 Everything looked great besides one small, yet extremely annoying, caveat.
 
@@ -38,5 +46,12 @@ The <a href="http://code.google.com/apis/webfonts/docs/webfont_loader.html" titl
 
 **Note**: If you see a horizontal scroll-bar after implementing the WebFont Loader on body text, try adding overflow attributes:
 
-<pre><code class="css">body {font-size: 75%; font-family:DroidSansRegular; overflow: -moz-scrollbars-vertical; overflow-x: hidden; overflow-y: scroll;}
-</code></pre>
+{% highlight css %}
+body {
+	font-size: 75%;
+	font-family: DroidSansRegular;
+	overflow: -moz-scrollbars-vertical;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+{% endhighlight %}

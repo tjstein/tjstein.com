@@ -10,7 +10,9 @@ After setting up PHP 5.2.10, I wanted to install a few additional modules using 
 
 The problem seems to exhibit itself with corrupted PEAR installations in PHP 5.2.9 and 5.2.10. To fix this, just backup and update the channels:
 
-<pre><code class="bash">mv /usr/local/lib/php/.channels /usr/local/lib/php/.channels.bak</code></pre>
-<pre><code class="bash">pear update-channels</code></pre>
+{% highlight bash %}
+mv /usr/local/lib/php/.channels /usr/local/lib/php/.channels.bak
+pear update-channels
+{% endhighlight %}
 
 After that, you should be good to go.
