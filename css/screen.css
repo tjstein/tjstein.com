@@ -853,86 +853,152 @@ hr.space {
     clear: both;
 }
 pre code {
-    background: none repeat scroll 0 0 #000000;
-    color: #F8F8F8;
+	background: url("/images/pre.png") repeat-x scroll 0 0 #F2F2F5;
+	border: 1px solid #D8D8DC;
+    color: #000;
     display: block;
-    font: 1em/1.3em Lucida Console, Consolas, Monaco, monospace;
+    font-family: Lucida Console, Consolas, Monaco, monospace;
+	font-size: 12px;
+	line-height: 1.6em;
     margin: 0 0 1.5em;
     overflow: auto;
-    padding: 0.5em;
+    padding: 0.7em;
+	-moz-border-radius: 7px 7px 7px 7px;
+	border-bottom-left-radius: 7px 7px;
+	border-bottom-right-radius: 7px 7px;
+	border-top-left-radius: 7px 7px;
+	border-top-right-radius: 7px 7px;
 }
-pre .comment, pre .template_comment, pre .javadoc {
-    color: #AEAEAE;
-    font-style: italic;
+pre.terminal {
+	background-color: #444444;
+	border: 2px solid #000000;
+	color: #17FF00;
+    display: block;
+    font-family: Lucida Console, Consolas, Monaco, monospace;
+	font-size: 12px;
+	line-height: 1.6em;
+    margin: 0 0 1.5em;
+    overflow: auto;
+    padding: 0.7em;
+	-moz-border-radius: 7px 7px 7px 7px;
+	border-bottom-left-radius: 7px 7px;
+	border-bottom-right-radius: 7px 7px;
+	border-top-left-radius: 7px 7px;
+	border-top-right-radius: 7px 7px;
 }
-pre .keyword, pre .ruby .function .keyword {
-    color: #E28964;
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .javadoc {
+  color: #998;
+  font-style: italic
 }
-pre .function .keyword, pre .sub .keyword, pre .method, pre .list .title {
-    color: #99CF50;
-}
-pre .string, pre .tag .value, pre .cdata, pre .filter .argument, pre .attr_selector, pre .apache .cbracket, pre .date, pre .tex .command {
-    color: #65B042;
-}
+
+pre .keyword,
+pre .css .rule .keyword,
+pre .winutils,
+pre .javascript .title,
+pre .lisp .title,
 pre .subst {
-    color: #DAEFA3;
+  color: #000;
+  font-weight: bold
 }
+
+pre .number,
+pre .hexcolor {
+  color: #40a070
+}
+
+pre .string,
+pre .tag .value,
+pre .phpdoc,
+pre .tex .formula {
+  color: #d14
+}
+
+pre .title,
+pre .id {
+  color: #900;
+  font-weight: bold
+}
+
+pre .javascript .title,
+pre .lisp .title,
+pre .subst {
+  font-weight: normal
+}
+
+pre .class .title,
+pre .tex .command {
+  color: #458;
+  font-weight: bold
+}
+
+pre .tag,
+pre .css .keyword,
+pre .html .keyword,
+pre .tag .title,
+pre .django .tag .keyword {
+  color: #000080;
+  font-weight: normal
+}
+
+pre .attribute,
+pre .variable,
+pre .instancevar,
+pre .lisp .body {
+  color: #008080
+}
+
 pre .regexp {
-    color: #E9C062;
+  color: #009926
 }
-pre .function .title, pre .sub .identifier, pre .pi, pre .tag, pre .tag .keyword, pre .decorator, pre .ini .title, pre .shebang {
-    color: #89BDFF;
+
+pre .class {
+  color: #458;
+  font-weight: bold
 }
-pre .class .title, pre .smalltalk .class, pre .javadoctag, pre .yardoctag, pre .phpdoc {
-    text-decoration: underline;
+
+pre .symbol,
+pre .ruby .symbol .string,
+pre .ruby .symbol .keyword,
+pre .ruby .symbol .keymethods,
+pre .lisp .keyword,
+pre .tex .special {
+  color: #990073
 }
-pre .symbol, pre .ruby .symbol .string, pre .ruby .symbol .keyword, pre .ruby .symbol .keymethods, pre .number {
-    color: #3387CC;
+
+pre .builtin,
+pre .built_in,
+pre .lisp .title {
+  color: #0086b3
 }
-pre .params, pre .variable {
-    color: #3E87E3;
+
+pre .preprocessor,
+pre .pi,
+pre .doctype,
+pre .shebang,
+pre .cdata {
+  color: #999;
+  font-weight: bold
 }
-pre .css .keyword, pre .pseudo, pre .tex .special {
-    color: #CDA869;
-}
-pre .css .class {
-    color: #9B703F;
-}
-pre .rules .keyword {
-    color: #C5AF75;
-}
-pre .rules .value {
-    color: #CF6A4C;
-}
-pre .css .id {
-    color: #8B98AB;
-}
-pre .annotation, pre .apache .sqbracket, pre .nginx .built_in {
-    color: #9B859D;
-}
-pre .preprocessor {
-    color: #8996A8;
-}
-pre .hexcolor, pre .css .value .number {
-    color: #DD7B3B;
-}
-pre .css .function {
-    color: #DAD085;
-}
-pre .diff .header, pre .chunk, pre .tex .formula {
-    background-color: #0E2231;
-    color: #F8F8F8;
-    font-style: italic;
-}
-pre .diff .change {
-    background-color: #4A410D;
-    color: #F8F8F8;
-}
-pre .addition {
-    background-color: #253B22;
-    color: #F8F8F8;
-}
+
 pre .deletion {
-    background-color: #420E09;
-    color: #F8F8F8;
+  background: #fdd
+}
+
+pre .addition {
+  background: #dfd
+}
+
+pre .diff .change {
+  background: #0086b3
+}
+
+pre .chunk {
+  color: #aaa
+}
+
+pre .tex .formula {
+  opacity: 0.5;
 }
