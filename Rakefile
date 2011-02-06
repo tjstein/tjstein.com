@@ -7,7 +7,7 @@ require 'rake/clean'
 
 desc 'Build site with Jekyll'
 task :build => [:clean] do
-  jekyll  
+  jekyll
 end
 
 desc 'Notify Google of the new sitemap'
@@ -24,7 +24,7 @@ end
  
 desc 'Start server with --auto'
 task :server => [:clean]  do
-  jekyll('--server --auto')
+  jekyll('--server --auto --pygments')
 end
 
 desc 'Build & Deploy'
@@ -86,6 +86,6 @@ end
 
 task :default => :server
 
-def jekyll(opts = '')
+def jekyll(opts = '--pygments')
   sh 'jekyll ' + opts
 end
