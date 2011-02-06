@@ -13,7 +13,7 @@ paginate_files:
 permalink: /:year/:month/:title
 
 markdown: rdiscount
-pygments: false
+pygments: true
 
 exclude:
   - README.markdown
