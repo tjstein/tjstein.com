@@ -24,7 +24,7 @@ end
  
 desc 'Start server with --auto'
 task :server => [:clean]  do
-  jekyll('--server --auto --pygments')
+  jekyll('--server --auto')
 end
 
 desc 'Build & Deploy'
@@ -86,6 +86,6 @@ end
 
 task :default => :server
 
-def jekyll(opts = '--pygments')
-  sh 'jekyll ' + opts
+def jekyll(opts = '')
+  sh 'time jekyll ' + opts
 end
