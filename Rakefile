@@ -29,8 +29,7 @@ end
 
 desc 'Build & Deploy'
 task :deploy do
-  sh 'rsync -rtz --delete _site/ deploy@tjstein.com:/var/www/tjstein.com/public'
-end
+  sh "rsync -rtzh --delete _site/ --rsh='ssh -p43102' deploy@tjstein.com:/var/www/tjstein.com/public" end
 
 desc 'Minify CSS & HTML'
 task :minify do
