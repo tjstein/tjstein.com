@@ -8,13 +8,13 @@ Since switching from a spawn-fcgi implementation several months ago, I’ve been
 
 Before installing, make sure you have the most recent version of PHP-FPM:
 
-{% highlight bash %}
-php-fpm -v
+<pre class="terminal">
+[www-data@lenny:/var/www]# php-fpm -v
 PHP 5.3.2-1ubuntu4.5ppa5~lucid1 (fpm-fcgi) (built: Sep 22 2010 08:04:01)
 Copyright (c) 1997-2009 The PHP Group
 Zend Engine v2.3.0, Copyright (c) 1998-2010 Zend Technologies
     with Suhosin v0.9.29, Copyright (c) 2007, by SektionEins GmbH
-{% endhighlight %}
+</pre>
 
 Now we can get into our plugin directory, clone the plugins from my Git repo and make them executable:
 

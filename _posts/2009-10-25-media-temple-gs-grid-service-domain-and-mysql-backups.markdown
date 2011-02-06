@@ -46,11 +46,11 @@ echo "* Backed up..."
 
 This really simple script creates a tar.gz backup of the example.com directory, stamps it with the current date and places it in the the backup folder we just created. It will also prune any backup older than 7 days old. This number can be adjusted by tweaking the <em>MaxFileAge</em> value. Before saving the file, be sure to make the necessary adjustments for your site number after the /home directory. You'll also need to modify example.com for the actual domain you'll be backing up. Before adding it as a cron, run the script via SSH -- the output should look like this:
 
-{% highlight bash %}
+<pre class="terminal">
 example.com@n10:/home/00000/data$ ./backup.sh
 * Performing domain backup...
 * Backed up...
-{% endhighlight %}
+</pre>
 
 Depending on the size, the backup may hesitate after the initialization while the domain directory is being compressed. You can now verify that the new backup is in the <strong>/home/#####/data/backup/</strong> directory with the today's date: <em>example.com_25_10_09.tar.gz</em>. Once you've confirmed the backup works, add the backup.sh file as a cron within the AccountCenter following this <a href="http://kb.mediatemple.net/questions/243/" target="_blank">KnowledgeBase</a> article. You can schedule the cron as frequent as you would like.
 
@@ -87,10 +87,10 @@ exit 0
 
 This bash script uses mysqldump to dump a MySQL database which stamps it with the current date and places it in the the backup folder we created before. This will also prune any database backups that are older than 7 days. Before saving the file, be sure to make the necessary adjustments for your site number and database credentials -- all of this can be found under the Manage Databases section of the AccountCenter. Before adding it as a cron, run the script via SSH -- the output should look like this:
 
-{% highlight bash %}
+<pre class="terminal">
 example.com@n10:/home/00000/data$ ./db-backup.sh
 * Performing SQL dump...
 * Backed up...
-{% endhighlight %}
+</pre>
 
 Once you've confirmed the script completes without errors, add it as a cron job so you'll never have to worry about losing your MySQL data again!
