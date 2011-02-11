@@ -857,8 +857,8 @@ pre code {
 	border: 1px solid #D8D8DC;
     color: #000;
     display: block;
-    font-family: Lucida Console, Consolas, Monaco, monospace;
-	font-size: 12px;
+    font-family: "Menlo","Monaco","Consolas", Lucida Console, Consolas, Monaco, monospace !important;
+	font-size: 13px;
 	line-height: 1.6em;
     margin: 0 0 1.5em;
     overflow: auto;
@@ -874,7 +874,7 @@ pre.terminal {
 	border: 2px solid #000000;
 	color: #17FF00;
     display: block;
-    font-family: Lucida Console, Consolas, Monaco, monospace;
+    font-family: "Menlo","Monaco","Consolas", Lucida Console, Consolas, Monaco, monospace !important;
 	font-size: 12px;
 	line-height: 1.6em;
     margin: 0 0 1.5em;
