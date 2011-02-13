@@ -345,7 +345,7 @@ form.inline p {
 }
 .container {
     margin: 0 auto;
-    width: 950px;
+    width: 800px;
 }
 .alignleft {
     background-color: #FFFFFF;
@@ -374,7 +374,7 @@ form.inline p {
     width: 150px;
 }
 .span-5 {
-    width: 190px;
+    width: 100px;
 }
 .span-6 {
     width: 230px;
@@ -407,7 +407,7 @@ form.inline p {
     width: 590px;
 }
 .span-16 {
-    width: 630px;
+    width: 650px;
 }
 .span-17 {
     width: 670px;
@@ -453,7 +453,7 @@ input.span-4, textarea.span-4 {
     width: 138px;
 }
 input.span-5, textarea.span-5 {
-    width: 178px;
+    width: 100px;
 }
 input.span-6, textarea.span-6 {
     width: 218px;
@@ -858,7 +858,7 @@ pre code {
     color: #000;
     display: block;
     font-family: "Menlo","Monaco","Consolas", Lucida Console, Consolas, Monaco, monospace !important;
-	font-size: 13px;
+	font-size: 12px;
 	line-height: 1.6em;
     margin: 0 0 1.5em;
     overflow: auto;
