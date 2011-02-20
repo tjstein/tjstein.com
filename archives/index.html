@@ -2,15 +2,11 @@
 layout: page
 title: Archives
 ---
-<ul class="archive">
   {% for post in site.posts %}
-    <li>
-      {{ post.date | date: "%Y-%m-%d" }} | <a href="{{ site.url }}{{ post.url }}" title="{{ post.title | escape }}" rel="bookmark">{{ post.title }}</a>
+      {{ post.date | date: "%Y-%m-%d" }}<a href="{{ site.url }}{{ post.url }}" title="{{ post.title | escape }}" rel="bookmark"><h4>{{ post.title }}</h4></a>
       {% if post.excerpt.size > 0 %}
         <div class="archiveblock">
           <a href="{{ site.url }}{{ post.url }}" title="{{ post.title | escape }}" rel="bookmark">{{ post.excerpt }}</a>
         </div>
       {% endif %}
-    </li>
   {% endfor %}
-</ul>
