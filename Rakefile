@@ -40,6 +40,13 @@ task :minify do
   sh 'java -jar ~/.java/htmlcompressor-0.9.8.jar --type=xml _site/sitemap.xml -o _site/sitemap.xml'
 end
 
+desc 'Backup to NAS + Amazon S3'
+task :backup do
+ begin
+  sh "./backup.sh"
+ end
+end
+
 desc 'Push source code to Github'
 task :push do
   puts '* Pushing to Github'
