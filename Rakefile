@@ -29,7 +29,8 @@ end
 
 desc 'Build & Deploy'
 task :deploy do
-  sh "rsync -rtzh --delete _site/ --rsh='ssh -p43102' deploy@tjstein.com:/var/www/tjstein.com/public" end
+  sh "rsync -rtzh --delete _site/ --rsh='ssh -p43102' deploy@tjstein.com:/var/www/tjstein.com/public"
+end
 
 desc 'Minify CSS & HTML'
 task :minify do
@@ -42,9 +43,8 @@ end
 
 desc 'Backup to NAS + Amazon S3'
 task :backup do
- begin
-  sh "./backup.sh"
- end
+  puts '* Backing up to NAS + Amazon S3'
+  puts `./backup.sh`
 end
 
 desc 'Push source code to Github'
