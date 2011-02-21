@@ -116,6 +116,10 @@ a {
     color: #5C7374;
     text-decoration: none;
 }
+.quote {
+	padding: 0px;
+	float: right;
+}
 blockquote {
     color: #666666;
     font-family: georgia;
