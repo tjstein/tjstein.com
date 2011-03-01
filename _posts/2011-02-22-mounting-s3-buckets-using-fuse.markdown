@@ -67,9 +67,16 @@ s3fs bucketname -o use_cache=/tmp -o allow_other /mnt/s3
 
 To allow access to the bucket, you must authenticate using your AWS secret access key and access key. You can either add the credentials in the s3fs command using flags or use a password file. Depending on what version of s3fs you are using, the location of the password file may differ -- it will most likely reside in your user's home directory or /etc.
 
+I also suggest using the <em>use_cache</em> option. If enabled, s3fs automatically maintains a local cache of files in the folder specified by <em>use_cache</em>. Whenever s3fs needs to read or write a file on S3, it first downloads the entire file locally to the folder specified by <em>use_cache</em> and operates on it. When FUSE release() is called, s3fs will re-upload the file to s3 if it has been changed, using md5 checksums to minimize transfers from S3.
+
 To confirm the mount, run <em>mount -l</em> and look for /mnt/s3. 
 
-Notes:
-	Fuse performance
-	Price of S3 using RRS
-	use_cache option
+<h4>Notes</h4>
+
+While this method is easy to implement, there are some caveats to be aware of.
+
+* Because of the distributed nature of S3, you may experience some propagation delay. So, after the creation of a file, it may not be immediately available for any subsequent file operation. To read more about the "eventual consistency", check out the following post from <a href="http://shlomoswidler.com/2009/12/read-after-write-consistency-in-amazon.html" rel="external">shlomoswidler.com</a>.
+
+* You can't update part of an object on S3. If you want to update 1 byte of a 5GB object, you'll have to re-upload the entire object.
+
+* The software documentation for s3fs is lacking, likely due to a commercial version being available now.
