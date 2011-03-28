@@ -858,6 +858,7 @@ hr.space {
 }
 pre code {
 	background: url("/images/pre.png") repeat-x scroll 0 0 #F2F2F5;
+	box-shadow: 0 2px 4px #D8D8DC;
 	border: 1px solid #D8D8DC;
     color: #000;
     display: block;
@@ -875,7 +876,8 @@ pre code {
 }
 pre.terminal {
 	background-color: #444444;
-	border: 2px solid #000000;
+	box-shadow: 0 2px 4px #D8D8DC;
+	border: 2px solid #5a5a5a;
 	color: #17FF00;
     display: block;
     font-family: "Menlo","Monaco","Consolas", Lucida Console, Consolas, Monaco, monospace !important;
