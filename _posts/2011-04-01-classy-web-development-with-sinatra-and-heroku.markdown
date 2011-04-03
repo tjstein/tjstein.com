@@ -4,7 +4,7 @@ title: Classy Web Development with Sinatra and Heroku
 excerpt: Since my recent switch from WordPress to Jekyll, I've really enjoyed playing around with Ruby. Although I don't have much programming experience, I've been fascinated with one particular Ruby framework, Sinatra.
 comments: true
 ---
-<img alt="Postbox" src="/images/sinatra.gif" class="alignleft">Since my recent switch from WordPress to Jekyll, I've really enjoyed playing around with Ruby. Although I don't have much programming experience, I've been fascinated with one particular Ruby framework, <a href="http://www.sinatrarb.com/" rel="external" target="_new">Sinatra<a/>.
+<img src="/images/sinatra.gif" class="alignleft">Since my recent switch from WordPress to Jekyll, I've really enjoyed playing around with Ruby. Although I don't have much programming experience, I've been fascinated with one particular Ruby framework, <a href="http://www.sinatrarb.com/" rel="external" target="_new">Sinatra</a>.
 	
 Sinatra is a DSL (domain-specific language) for quickly creating web applications in Ruby with very little effort. It is a minimalist framework, built right on top of <a href="http://rack.rubyforge.org/" rel="external" target="_new">Rack</a>, a standard interface for Ruby web frameworks. Unlike rails, you won't find many bells and whistles here. There are no models, views or controllers by default, but that's where Sinatra really shines. You can use Sinatra to create lean, focused web applications in just a few lines of code.
 
@@ -76,4 +76,4 @@ task :deploy do
 end
 {% endhighlight %}
 
-If you end up using the template in your own application or want to contribute, send a pull request or just fork the project. 
+If you end up using the template in your own application or want to contribute, send a pull request or just fork the project. Keep it classy.
