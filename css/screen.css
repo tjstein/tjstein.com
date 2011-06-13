@@ -857,7 +857,7 @@ hr.space {
     clear: both;
 }
 code {
-   font-family: "Menlo","Monaco","Consolas", Lucida Console, Consolas, Monaco, monospace !important;
+   font-family: monospace !important;
 	background-color: #FAFAFA;
    border: 1px solid #CCCCCC;
    margin: 0;
