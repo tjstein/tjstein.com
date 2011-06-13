@@ -36,14 +36,14 @@ tar zxvf s3fs-1.40.tar.gz && cd s3fs-1.40
 make && make install
 {% endhighlight %}
 
-This will install the s3fs binary in <em>/usr/local/bin/s3fs</em>. You can add it to your .bashrc if needed:
+This will install the s3fs binary in <code>/usr/local/bin/s3fs</code>. You can add it to your .bashrc if needed:
 
 {% highlight bash %}
 echo "export s3fs='/usr/local/bin/s3fs'" >> ~/.bashrc
 source ~/.bashrc
 {% endhighlight %}
 
-Now we have to set the allow_other mount option for FUSE. Using the allow_other mount option works fine as root, but in order to have it work as other users, you need uncomment user_allow_other in the fuse configuration file:
+Now we have to set the <code>allow_other mount</code> option for FUSE. Using the <code>allow_other mount</code> option works fine as root, but in order to have it work as other users, you need uncomment <code>user_allow_other</code> in the fuse configuration file:
 
 {% highlight perl %}
 perl -p -i -e 's|#user_allow_other|user_allow_other|g;' /etc/fuse.conf
@@ -67,9 +67,9 @@ s3fs bucketname -o use_cache=/tmp -o allow_other /mnt/s3
 
 To allow access to the bucket, you must authenticate using your AWS secret access key and access key. You can either add the credentials in the s3fs command using flags or use a password file. Depending on what version of s3fs you are using, the location of the password file may differ -- it will most likely reside in your user's home directory or /etc.
 
-I also suggest using the <em>use_cache</em> option. If enabled, s3fs automatically maintains a local cache of files in the folder specified by <em>use_cache</em>. Whenever s3fs needs to read or write a file on S3, it first downloads the entire file locally to the folder specified by <em>use_cache</em> and operates on it. When FUSE release() is called, s3fs will re-upload the file to s3 if it has been changed, using md5 checksums to minimize transfers from S3.
+I also suggest using the <code>use_cache</code> option. If enabled, s3fs automatically maintains a local cache of files in the folder specified by <code>use_cache</code>. Whenever s3fs needs to read or write a file on S3, it first downloads the entire file locally to the folder specified by <code>use_cache</code> and operates on it. When FUSE release() is called, s3fs will re-upload the file to s3 if it has been changed, using md5 checksums to minimize transfers from S3.
 
-To confirm the mount, run <em>mount -l</em> and look for /mnt/s3. 
+To confirm the mount, run <code>mount -l</code> and look for /mnt/s3. 
 
 <h4>Notes</h4>
 
