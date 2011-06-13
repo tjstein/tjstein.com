@@ -856,6 +856,13 @@ hr.space {
 .clear {
     clear: both;
 }
+.post code {
+	background-color: #FAFAFA;
+   border: 1px solid #CCCCCC;
+   margin: 0;
+   padding: 1px 3px;
+   white-space: nowrap;
+}
 pre code {
 	background: url("/images/pre.png") repeat-x scroll 0 0 #F2F2F5;
 	box-shadow: 0 2px 4px #D8D8DC;
