@@ -856,7 +856,7 @@ hr.space {
 .clear {
     clear: both;
 }
-.post code {
+code {
 	background-color: #FAFAFA;
    border: 1px solid #CCCCCC;
    margin: 0;
