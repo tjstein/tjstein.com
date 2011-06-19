@@ -1020,8 +1020,12 @@ pre .tex .formula {
 
 .follow-box {
     background: -moz-linear-gradient(center top , #F6FBFF, #D5E8F5) repeat scroll 0 0 transparent;
+	 background: -webkit-gradient(linear, left top, left bottom, from(#F6FBFF), to(#D5E8F5));
+	 filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#f6fbff', endColorstr='#d5e8f5');
     border: 1px solid #C3E0F2;
     border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
     display: block;
     margin: 5px 0 30px;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
