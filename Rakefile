@@ -27,13 +27,21 @@ task :server => [:clean]  do
   jekyll('--server --auto')
 end
 
-desc 'Build & Deploy'
+desc 'Deploy to production'
 task :deploy do
+  puts '* Publishing files to production server'
   sh "rsync -rtzh --delete _site/ --rsh='ssh -p43102' deploy@tjstein.com:/var/www/tjstein.com/public"
+end
+
+desc 'rsync the contents of ./_site to the staging path on the server'
+task :stage do
+  puts '* Publishing files to staging server'
+  sh "rsync -rtzh --delete _site/ --rsh='ssh -p43102' deploy@tjstein.com:/var/www/stage.tjstein.com/public"
 end
 
 desc 'Minify CSS & HTML'
 task :minify do
+  puts '* Minifying CSS and HTML'
   sh 'java -jar ~/.java/yuicompressor-2.4.2.jar --type css css/print.css -o _site/css/print.css'
   sh 'java -jar ~/.java/yuicompressor-2.4.2.jar --type css css/screen.css -o _site/css/screen.css'
   sh 'java -jar ~/.java/yuicompressor-2.4.2.jar --type css css/custom.css -o _site/css/custom.css'
