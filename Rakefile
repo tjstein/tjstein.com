@@ -39,6 +39,32 @@ task :stage do
   sh "rsync -rtzh --delete _site/ --rsh='ssh -p43102' deploy@tjstein.com:/var/www/stage.tjstein.com/public"
 end
 
+##
+# Package Requirement:
+# jpegoptim
+# Install OSX:
+# brew install jpegoptim
+# Install Ubuntu:
+# [apt-get | aptitude] install jpegoptim
+#
+desc 'Optimize JPG images in output/images directory using jpegoptim'
+task :jpg do
+  puts `find _site/images -name '*.jpg' -exec jpegoptim {} \\;`
+end
+
+##
+# Package Requirement:
+# optipng
+# Install OSX:
+# brew install optipng
+# Install Ubuntu:
+# [apt-get | aptitude] install optipng
+#
+desc 'Optimize PNG images in output/images directory using optipng'
+task :png do
+  puts `find _site/images -name '*.png' -exec optipng {} \\;`
+end
+
 desc 'Minify CSS & HTML'
 task :minify do
   puts '* Minifying CSS and HTML'
