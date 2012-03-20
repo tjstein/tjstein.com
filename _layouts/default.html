@@ -1,47 +1,30 @@
 <!doctype html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>{{ page.title }} | {{ site.title }}</title>
-    <meta name="description" content="{{ site.description }}" />
-    <meta name="author" content="{{ site.author }}" />
-    <meta name="robots" content="index, follow" />
-    <meta name="viewport" content="user-scalable=no,width=device-width" />
-    <meta name="keywords" content="TJ Stein, Thomas J. Stein, Thomas Stein" />
-    <meta name="copyright" content="Copyright 2008 to Present"/>
-    <meta name="google-site-verification" content="XUkxAz2T7iH7BfeNCKk88xUnTqNHjnMirb4GQv196GA" />
-    <link href="{{ site.url }}/feed" rel="alternate" title="TJ Stein's RSS feed" type="application/rss+xml" />
-    <link href="http://tjstein.com/" rel="home" />
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link type="text/css" rel="stylesheet" media="screen, projection" href="/css/screen.css" /> 
-    <link type="text/css" rel="stylesheet" media="all" href="/css/custom.css" />
-    <script src="http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js" ></script>
-    <!--[if lt IE 8]>
-      <link type="text/css" rel="stylesheet" media="screen, projection" href="/css/ie.css" />
-    <![endif]--> 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-	<script type="text/javascript">
-			WebFontConfig = {
-			  custom: { families: ['DroidSansRegular', 'YanoneKaffeesatzRegular'],
-				urls: [ 'http://tjstein.com/css/screen.css' ] }
-			};
-
-	      (function() {
-	        document.getElementsByTagName("html")[0].className += " wf-loading";
-	        var wf = document.createElement('script');
-	        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
-			'://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-	        wf.type = 'text/javascript';
-	        wf.async = 'true';
-	        var s = document.getElementsByTagName('script')[0];
-	        s.parentNode.insertBefore(wf, s);
-	      })();
-	</script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}" />
+  <meta name="author" content="{{ site.author }}" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="user-scalable=no,width=device-width" />
+  <meta name="keywords" content="TJ Stein, Thomas J. Stein, Thomas Stein" />
+  <meta name="copyright" content="Copyright 2008 to Present"/>
+  <meta name="google-site-verification" content="XUkxAz2T7iH7BfeNCKk88xUnTqNHjnMirb4GQv196GA" />
+  <link href="{{ site.url }}/feed" rel="alternate" title="TJ Stein's RSS feed" type="application/rss+xml" />
+  <link href="http://tjstein.com/" rel="home" />
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  <link type="text/css" rel="stylesheet" media="screen, projection" href="/css/screen.css" /> 
+  <link type="text/css" rel="stylesheet" media="all" href="/css/custom.css" />
+  <!--[if lt IE 8]>
+    <link type="text/css" rel="stylesheet" media="screen, projection" href="/css/ie.css" />
+  <![endif]--> 
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  {% include prettify.html %}
   {% include google_analytics.html %}	
-  </head>
+</head>
   <body>
     <div class="container">
       <header class="span-21 last" id="header">
@@ -107,7 +90,7 @@
     </div>
 
     {% include disqus.html %}
-	<script src="/js/highlight.pack.js"></script>
+    <script src="/js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
