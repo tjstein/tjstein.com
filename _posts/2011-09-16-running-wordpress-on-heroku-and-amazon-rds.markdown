@@ -99,6 +99,6 @@ To git@heroku.com:evening-waterfall-3977.git
 
 * The zlib extension for PHP is not compiled on the Celadon Cedar Stack. Theme and plugin uploads through the WordPress admin panel will fail. To get around this, set up your themes and plugins on your local workstation first, commit and deploy.
 
-* Don't have a phpinfo page in the document root as it will contain your database crendentials in plain text.
+* Do not include a phpinfo page in the document root as it will contain your database credentials in plain text.
 
 * If you want to have pretty permalinks, create the .htaccess file on your local machine and populate the mod_rewrite rules prior to deploying.

@@ -1046,7 +1046,7 @@ a.follow-box {
 }
 .follow-box h3 strong {
     color: #186487;
-    font-weight: bold;
+    font-weight: normal;
 }
 a.follow-box:hover h3 strong {
     text-decoration: underline;
