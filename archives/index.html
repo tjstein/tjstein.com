@@ -2,11 +2,11 @@
 layout: page
 title: Archives
 ---
-  {% for post in site.posts %}
-      {{ post.date | date: "%Y-%m-%d" }}<a href="{{ site.url }}{{ post.url }}" title="{{ post.title | escape }}" rel="bookmark"><h4>{{ post.title }}</h4></a>
-      {% if post.excerpt.size > 0 %}
-        <div class="archiveblock">
-          <a href="{{ site.url }}{{ post.url }}" title="{{ post.title | escape }}" rel="bookmark">{{ post.excerpt }}</a>
-        </div>
-      {% endif %}
-  {% endfor %}
+<p>Listing {{ site.posts.size }} archived posts:</p>
+<ul>
+{% for post in site.posts %}
+  <li>
+    {{ post.date | date: "%b %d, %Y"  }} &mdash; <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+</ul>

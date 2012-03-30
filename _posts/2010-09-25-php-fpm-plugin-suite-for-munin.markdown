@@ -20,7 +20,7 @@ Now we can get into our plugin directory, clone the plugins from my Git repo and
 
 {% highlight bash %}
 cd /usr/share/munin/plugins
-git clone git://github.com/bummercloud/php5-fpm-munin-plugins.git
+git clone git://github.com/tjstein/php5-fpm-munin-plugins.git
 chmod +x PHP5-FPM-Munin-Plugins/phpfpm_*
 {% endhighlight %}
 
