@@ -30,13 +30,7 @@ end
 desc 'Deploy to production'
 task :deploy do
   puts '* Publishing files to production server'
-  sh "rsync -rtzh --delete _site/ --rsh='ssh -p43102' deploy@tjstein.com:/var/www/tjstein.com/public"
-end
-
-desc 'rsync the contents of ./_site to the staging path on the server'
-task :stage do
-  puts '* Publishing files to staging server'
-  sh "rsync -rtzh --delete _site/ --rsh='ssh -p43102' deploy@tjstein.com:/var/www/stage.tjstein.com/public"
+  sh "rsync -rtzh --delete _site/ --rsh='ssh -p43102' deploy@tjstein.com:/home/deploy/tjstein.com/public"
 end
 
 ##
