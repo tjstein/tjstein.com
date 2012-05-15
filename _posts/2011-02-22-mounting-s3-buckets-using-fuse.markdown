@@ -23,7 +23,7 @@ To get started, we'll need to install some prerequisites. I've set this up succe
 
 {% highlight bash %}
 aptitude -y install build-essential libfuse-dev fuse-utils libcurl4-openssl-dev 
-aptitude -y libxml2-dev mime-support pkg-config
+aptitude -y install libxml2-dev mime-support pkg-config
 {% endhighlight %}
 
 Now you'll need to download and compile the s3fs source. As of 2/22/2011, the most recent release, supporting reduced redundancy storage, is 1.40. Check out the <a href="http://code.google.com/p/s3fs/downloads/list" rel="external">Google Code</a> page to be certain you're grabbing the most recent release.
