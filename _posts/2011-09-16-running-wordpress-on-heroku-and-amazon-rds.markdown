@@ -42,10 +42,10 @@ rds-authorize-db-security-group-ingress default \
     --ec2-security-group-owner-id 098166147350
 {% endhighlight %}
 
-Now we can begin building the application layer. Since we're going to be using Git for version control, I'd suggest cloning WordPress from Mark Jaquith's <a href="https://github.com/markjaquith/WordPress" target="_new">GitHub</a> repository; it is synced from Automattic's SVN repository every 30 minutes, including branches and tags:
+Now we can begin building the application layer. Since we're going to be using Git for version control, I'd suggest cloning WordPress from the <a href="https://github.com/WordPress" target="_new">GitHub</a> repository; it is synced from Automattic's SVN repository every 15 minutes, including branches and tags:
 
 {% highlight bash %}
-git clone git://github.com/markjaquith/WordPress.git
+git clone git://github.com/WordPress/WordPress.git
 cd WordPress
 {% endhighlight %}
 
