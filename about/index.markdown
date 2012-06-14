@@ -11,4 +11,4 @@ In my free time, I enjoy traveling, long-distance running, cycling and craft bee
 
 <h2>The Site</h2>
 
-This is probably the seventh or so incarnation of my personal blog, an accurate reflection of my relationship with blogging platforms. This version runs on [Jekyll](https://github.com/mojombo/jekyll "Jekyll"), a blog-aware, static site generator written in Ruby. Posts are written in Markdown and the source is a available on [GitHub](https://github.com/bummercloud/tjstein.com "GitHub").
+This is probably the seventh or so incarnation of my personal blog, an accurate reflection of my relationship with blogging platforms. This version runs on [Jekyll](https://github.com/mojombo/jekyll "Jekyll"), a blog-aware, static site generator written in Ruby. Posts are written in Markdown and the source is a available on [GitHub](https://github.com/tjstein/tjstein.com "GitHub").
