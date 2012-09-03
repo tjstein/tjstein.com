@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-<img src="/images/tj-stein.jpg" align="left" style="margin-right:30px; margin-top:7px;">Hi, I'm TJ. I am a technology enthusiast, BBQ lover and Alabama native living in sunny Los Angeles, California. Since 2008, I've worked for [(mt) Media Temple](http://mediatemple.net/ "(mt) Media Temple"), an industry-leading, privately held, profitable web hosting and software application services company. In my current role, I lead a team of incredibly smart and passionate customer service ninjas. I also contribute to our social media efforts, incident response team and customer service leadership group.
+<img src="/images/tj-stein-2012.jpg" align="left" style="margin-right:30px; margin-top:7px;">Hi, I'm TJ. I am a technology enthusiast, BBQ lover and Alabama native living in sunny Los Angeles, California. Since 2008, I've worked for [(mt) Media Temple](http://mediatemple.net/ "(mt) Media Temple"), an industry-leading, privately held, profitable web hosting and software application services company. In my current role, I lead a team of incredibly smart and passionate customer service ninjas. I also contribute to our social media efforts, incident response team and customer service leadership group.
 
 Prior to joining (mt) Media Temple, I received my B.A. in Communication from Flagler College. After graduating in 2005, I became the online content manager for the [St. Augustine Record](http://staugustine.com/ "The St. Augustine Record") and Online Editor of [Drift Magazine](http://surfthedrift.com/ "Drift Magazine").
 
