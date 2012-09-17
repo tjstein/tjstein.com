@@ -5,7 +5,7 @@ excerpt: Diving into node.js to solve the ancient problem of generating random p
 comments: true
 ---
 
-For a few years now, I've been using the same silly random password generator from a coworker of mine. Since I use 1Password for password management, I'm frequently creating new random passwords on a daily basis. While a feature exists within 1Password for generating new passwords, I usually find comfort in doing this from Terminal. When my coworker's server was down for a few days, I temporarily reverted to some bash-foo:
+For a few years now, I've been using the same silly random password generator from a coworker of mine. Since I use 1Password for password management, I'm frequently creating new random passwords. While a feature exists within 1Password for generating new passwords, I usually find comfort in doing this from Terminal. When my coworker's server was down for a few days, I temporarily reverted to some bash-foo:
 
 {% highlight bash %}
 date +%s | sha256sum | base64 | head -c 13 ; echo
