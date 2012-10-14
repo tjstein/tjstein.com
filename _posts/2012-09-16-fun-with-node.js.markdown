@@ -16,7 +16,7 @@ tr -cd '[:alnum:]' < /dev/urandom | fold -w13 | head -n1
 {% endhighlight %}
 
 {% highlight bash %}
-< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-13};echo;
+< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c 13 ; echo
 {% endhighlight %}
 
 While these examples are super handy, I wanted to use this as an opportunity to play around with <a href="http://nodejs.org/" target="_new" rel="external">node.js</a>. This simple utility can generate 13 character random passwords using 2 node modules, <a href="https://github.com/visionmedia/express" target="_new" rel="external">express</a> and <a href="https://github.com/mikeal/request" target="_new" rel="external">request</a>. Here is the meat of it:
